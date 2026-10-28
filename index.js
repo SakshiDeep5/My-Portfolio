@@ -1,49 +1,32 @@
-const toggleBtn = document.getElementById("themeToggle");
+const themeToggle = document.querySelector("#themeToggle");
+const menuToggle = document.querySelector("#menuToggle");
+const navLinks = document.querySelector("#navLinks");
 
-toggleBtn.addEventListener("click", ()=> {
-  document.body.classList.toggle("light-theme");
-  const isLight = document.body.classList.contains("light-theme");
-  toggleBtn.textContent = isLight ? "🌞" : "🌙";
+const savedTheme = localStorage.getItem("portfolio-theme");
+if (savedTheme === "light") {
+  document.documentElement.dataset.theme = "light";
+  themeToggle.textContent = "☾";
+  themeToggle.setAttribute("aria-label", "Switch to dark mode");
+}
+
+themeToggle.addEventListener("click", () => {
+  const isLight = document.documentElement.dataset.theme === "light";
+  document.documentElement.dataset.theme = isLight ? "dark" : "light";
+  localStorage.setItem("portfolio-theme", isLight ? "dark" : "light");
+  themeToggle.textContent = isLight ? "☼" : "☾";
+  themeToggle.setAttribute("aria-label", isLight ? "Switch to light mode" : "Switch to dark mode");
 });
 
-const typedTextSpan=document.querySelector(".typed-text");
-const textArray=[
-    "Freelancer",
-    "Software Engineer",
-    "Web Developer",
-    "Data Analyst",
-];
+menuToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("is-open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "Close" : "Menu";
+});
 
-const typingDelay=50;
-const erasingDelay=50;
-const newTextDelay=200;
-let textArrayIndex=0;
-let charIndex=0;
-
-function type(){
-    if(charIndex < textArray[textArrayIndex].length){
-        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type,typingDelay);
-    } else{
-        setTimeout(erase,newTextDelay);
-    }
-}
-
-function erase(){
-    if(charIndex > 0){
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(
-            0, charIndex-1);
-        charIndex--;
-        setTimeout(erase, erasingDelay);
-    }else{
-        textArrayIndex++;
-        if(textArrayIndex >= textArray.length) textArrayIndex=0;
-        setTimeout(type, typingDelay + 1100);
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function(){
-    //on DOM load initiate the effect
-    if(textArray.length) setTimeout(type,newTextDelay + 250);
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("is-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "Menu";
+  });
 });

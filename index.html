@@ -1,360 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyBrand: Work Showcase & Contact Portal</title>
-    
-    <!--link to font awesome and poppins-->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
-
-    <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-    rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="index.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sakshi Deep is a frontend and full-stack developer who builds responsive web apps and turns data into insights.">
+  <meta property="og:title" content="Sakshi Deep | Frontend & Full-Stack Developer">
+  <meta property="og:description" content="Portfolio of Sakshi Deep, a frontend and full-stack developer and data analyst.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/SakshiDeep5">
+  <title>Sakshi Deep | Frontend & Full-Stack Developer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23d6ff4b'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Arial' font-size='48' font-weight='700' fill='%23101616'%3ESD%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar" aria-label="main navigation">
-            <a href="#home" class="logo">My Portfolio</a>
-            <ul class="nav-links">
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#work">Work</a>
-                </li>
-                <li>
-                    <a href="#services">Services</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-            <button
-             class="theme-toggle"
-             id="themeToggle"
-             aria-label="toggler of theme"
-             >
-              🌙
-            </button>
-        </nav>
-    </header>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Sakshi Deep home"><span>SD</span> Sakshi Deep</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode">☼</button>
+      </div>
+    </nav>
+  </header>
 
-    <!---hero starts---->
-    <section id="home" class="hero" aria-label="homepage">
-        <div class="hero-text">
-            <p class="greeting">Hello, I'm a</p>
-            <h1>Sakshi Deep</h1>
-            <p>I'm a <span class="typed-text"></span></p>
-            <h1></h1>
-            <a href="#work" class="btn-primary" aria-label="view my work"
-            > View My Work</a>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/sakshi-deep" aria-label="LinkedIn">
-                    <img src="https://img.icons8.com/color/48/000000/linkedin.png" 
-                    alt="LinkedIn"
-                /></a>
-                <a href="https://github.com/SakshiDeep5" aria-label="GitHub">
-                    <img src="https://img.icons8.com/color/48/000000/github.png"
-                     alt="GitHub"
-                /></a>
-                <a href="#" aria-label="Twitter">
-                    <img src="https://img.icons8.com/color/48/000000/twitter.png"
-                     alt="Twitter"
-                /></a>
-            </div>
+  <main id="top">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Available for entry-level opportunities</p>
+        <h1 id="hero-title">Building digital products that feel <em>clear.</em></h1>
+        <p class="hero-intro">I’m Sakshi Deep, a frontend and full-stack developer who builds fast, responsive web apps and turns data into insights.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span>↗</span></a>
+          <a class="button button-secondary" href="/resume.pdf" download>Download resume <span>↓</span></a>
         </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/vector-1754112354409-db8c29d68976?q=80&w=2224&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-             alt=""
-             />
+        <div class="hero-meta">
+          <span>Based in Patna, India</span>
+          <span class="meta-line"></span>
+          <a href="mailto:deepsakshi07@gmail.com">deepsakshi07@gmail.com</a>
         </div>
-    </section>
-    
-    <!--work section-->
-
-    <section
-    id="work"
-    class="recent-works"
-    role="region"
-    aria-label="work section"
-    >
-    <h2>Recent Works</h2>
-
-    <!-- Project-1: Canvas Play -->
-    <div class="work-grid">
-        <div class="work-card">
-            <img src="./assets/canva.avif" 
-            alt="CanvaPlay"
-            />
-            <div class="overlay">
-                <h3>Canvas Play</h3>
-                <p>Interactive canvas drawing application</p>
-                <div class="buttons">
-                    <a class="btn" href="https://canvas-play-nu.vercel.app/">Live Demo</a>
-                    <a href="https://github.com/SakshiDeep5/CanvasPlay" class="btn-outline">View Code</a>
-                </div>
-            </div>
+      </div>
+      <div class="hero-visual" aria-label="Introduction graphic">
+        <div class="visual-grid"></div>
+        <div class="visual-card visual-card-main">
+          <span class="code-label">/ sakshi.deep</span>
+          <div class="code-lines"><span>const</span> <b>ideas</b> = <i>build</i>(<strong>“impact”</strong>);</div>
+          <div class="code-lines muted">frontend · full-stack · data</div>
         </div>
-
-        <!-- Project-2: N-Queen-Visualizer -->
-        <div class="work-card">
-            <img src="./assets/chessboard6.png"
-             alt="n-queen-visualizer"
-             />
-             <div class="overlay">
-                <h3>N-Queen-Visualizer</h3>
-                <p></p>
-                <div class="buttons">
-                    <a class="btn" href="https://n-queen-visualizer-nu-gules.vercel.app/">Live Demo</a>
-                    <a href="https://github.com/SakshiDeep5/N-Queen-Visualizer" class="btn-outline">View Code</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project-3: Dashboard -->
-        <div class="work-card">
-            <img src="./assets/admin-dashboard.png"
-             alt=""
-             />
-             <div class="overlay">
-                <h3>Smart Resource Manager</h3>
-                <p> Resource management dashboard</p>
-                <div class="buttons">
-                    <a class="btn" href="https://smart-resource-manager-seven.vercel.app/">Live Demo</a>
-                    <a href="https://github.com/SakshiDeep5/Smart-Resource-Manager-Allocation-Utilization-Suite" class="btn-outline">View Code</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project-1: Explore World -->
-        <div class="work-card">
-            <img src="./assets/legal-assistance-online-consulting-web-banner-vector-25111473.avif"
-             alt=""
-             />
-             <div class="overlay">
-                <h3>DastavezAi</h3>
-                <p> Legal website</p>
-                <div class="buttons">
-                    <a class="btn" href="https://dastavezai.org/"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Live Demo</a>
-                    <a href="#" class="btn-outline"><i class="fab fa-github"></i>View Code</a>
-                </div>
-            </div>
-        </div>
-    </div>
+        <div class="visual-card visual-card-float">01 <span>craft</span></div>
+        <div class="visual-mark">✦</div>
+      </div>
     </section>
 
-
-    <h2>E-Inivation Website Template</h2>
-
-    <!-- Project-1: Magical-Birthday-Invitation -->
-    <div class="work-grid">
-        <div class="work-card">
-            <img src="./assets/Screenshot 2026-10-27 150122.png" 
-            alt="CanvaPlay"
-            />
-            <div class="overlay">
-                <h3>Magical Birthday Invitation</h3>
-                <p>5-year old baby girl birthday invitation</p>
-                <div class="buttons">
-                    <a class="btn" href="https://magical-birthday-invitation.vercel.app/">Live Demo</a>
-                    <a href="https://github.com/SakshiDeep5/Magical-Birthday-Invitation" class="btn-outline">View Code</a>
-                </div>
-            </div>
+    <section class="section about-section container" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><span class="section-number">01</span><h2 id="about-title">A little about me</h2></div>
+      <div class="about-grid">
+        <p class="about-lead">I enjoy turning thoughtful designs into accessible, reliable interfaces—and using data to understand what makes products work better.</p>
+        <div class="about-body">
+          <p>My work sits at the intersection of frontend craft, practical full-stack development, and analytical thinking. I care about clean components, useful interactions, and shipping experiences people can understand quickly.</p>
+          <p>I’m looking for a junior role where I can contribute to a strong product team, keep learning, and make meaningful things for the web.</p>
         </div>
-
-        <!-- Project-2: Wedding Invitation -->
-        <div class="work-card">
-            <img src="./assets/Screenshot 2026-10-27 144525.png"
-             alt="wedding invitation"
-             />
-             <div class="overlay">
-                <h3>Wedding Invitation Website</h3>
-                <p></p>
-                <div class="buttons">
-                    <a class="btn" href="https://wedding-invitation-website-orcin.vercel.app/">Live Demo</a>
-                    <a href="#" class="btn-outline">View Code</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project-3: Wedding Invitation Website -->
-        <div class="work-card">
-            <img src="./assets/Screenshot 2026-10-27 144622.png"
-             alt=""
-             />
-             <div class="overlay">
-                <h3>Wedding Invitation Website</h3>
-                <p> </p>
-                <div class="buttons">
-                    <a class="btn" href="https://sacred-ivory-moments.vercel.app/">Live Demo</a>
-                    <a href="#" class="btn-outline">View Code</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project-4: Wedding Invitation Website -->
-        <div class="work-card">
-            <img src="./assets/Screenshot 2026-10-27 145556.png"
-             alt=""
-             />
-             <div class="overlay">
-                <h3>Wedding Invitation Website</h3>
-                <p> website</p>
-                <div class="buttons">
-                    <a class="btn" href="https://sunset-elegance.vercel.app/"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Live Demo</a>
-                    <a href="#" class="btn-outline"><i class="fab fa-github"></i>View Code</a>
-                </div>
-            </div>
-        </div>
-    </div>
+      </div>
     </section>
 
-
-    <!---services section----->
-
-    <section id="services" role="region" class="services" aria-label="Services section">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-laptop-code"></i>
-                </div>
-                <h3>Software Development</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti sint facilis laudantium provident!</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>Web Development</h3> 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti sint facilis laudantium provident!</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-chart-simple"></i>
-                </div>
-                <h3>Data Analyst</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti sint facilis laudantium provident!</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <h3>E-invitation Developer</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti sint facilis laudantium provident!</p>
-            </div>   
-        </div>
+    <section class="section skills-section container" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading"><span class="section-number">02</span><h2 id="skills-title">Tools I work with</h2></div>
+      <div class="skills-grid">
+        <article class="skill-group"><span class="skill-icon">01</span><h3>Languages</h3><p>JavaScript · Java · Python · SQL</p></article>
+        <article class="skill-group"><span class="skill-icon">02</span><h3>Frontend</h3><p>React · HTML5 · CSS3 · Tailwind CSS · Framer Motion</p></article>
+        <article class="skill-group"><span class="skill-icon">03</span><h3>Backend / Database</h3><p>Node.js</p></article>
+        <article class="skill-group"><span class="skill-icon">04</span><h3>Data analysis</h3><p>Excel · Power BI</p></article>
+        <article class="skill-group"><span class="skill-icon">05</span><h3>Tools</h3><p>Git · GitHub · Eclipse · VS Code · Vercel</p></article>
+      </div>
     </section>
 
-    <section id="testimonials" class="testimonials">
-        <h2>What my clients Say</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
-                 alt="Jane Joe"
-                 />
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Voluptatibus mollitia reiciendis vitae ipsam suscipit accusamus.
-                     Laudantium incidunt sint mollitia alias suscipit ad doloribus?
-                     Autem velit dolore quod ipsa totam ab?
-                    </p>
-                    <h4>Jane Joe</h4>
-                    <span>Software Engineer, Google</span>
-                </div>
-                <div class="testimonial-card">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
-                     alt="John Smith"
-                     />
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Voluptatibus mollitia reiciendis vitae ipsam suscipit accusamus.
-                     Laudantium incidunt sint mollitia alias suscipit ad doloribus?
-                     Autem velit dolore quod ipsa totam ab?
-                    </p>
-                    <h4>John Smith</h4>
-                    <span>Project Manager, Microsoft</span>
-                </div>
-                <div class="testimonial-card">
-                    <img src="https://plus.unsplash.com/premium_photo-1682096358356-5ffbe52b7aa1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                     alt="Peter Jones"
-                     />
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Voluptatibus mollitia reiciendis vitae ipsam suscipit accusamus.
-                     Laudantium incidunt sint mollitia alias suscipit ad doloribus?
-                     Autem velit dolore quod ipsa totam ab?
-                    </p>
-                    <h4>Peter Jones</h4>
-                    <span>Data Analyst, Oracle</span>
-                </div>
-                <div class="testimonial-card">
-                    <img src="https://plus.unsplash.com/premium_photo-1705009607254-5618bb0d0c35?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                     alt="Mary Johnson"
-                     />
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Voluptatibus mollitia reiciendis vitae ipsam suscipit accusamus.
-                     Laudantium incidunt sint mollitia alias suscipit ad doloribus?
-                     Autem velit dolore quod ipsa totam ab?
-                    </p>
-                    <h4>Mary Johnson</h4>
-                    <span>Web Developer</span>    
-            </div>
-        </div>
+    <section class="section projects-section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading section-heading-split"><div><span class="section-number">03</span><h2 id="projects-title">Selected work</h2></div><p>A selection of interfaces, dashboards, and interactive experiments.</p></div>
+      <div class="projects-grid">
+        <article class="project-card project-featured">
+          <div class="project-image"><img src="assets/legal-assistance-online-consulting-web-banner-vector-25111473.avif" alt="DastavezAI legal services website preview"><span class="project-index">01</span></div>
+          <div class="project-content"><div><p class="project-kicker">Website rebuild · React Developer</p><h3>DastavezAI</h3><p>Rebuilt a legal-services website with a clearer, more focused experience for people looking for online assistance.</p><div class="tags"><span>React</span><span>JavaScript</span><span>Tailwind CSS</span><span>HTML / CSS</span></div></div><div class="project-links"><a href="https://dastavezai.org/" target="_blank" rel="noreferrer">Live demo ↗</a></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-image"><img src="assets/admin-dashboard.png" alt="Smart Resource Manager dashboard preview"><span class="project-index">02</span></div>
+          <div class="project-content"><div><p class="project-kicker">Dashboard</p><h3>Smart Resource Manager</h3><p>A resource allocation and utilization dashboard designed to make team planning easier to scan and act on.</p><div class="tags"><span>React</span><span>JavaScript</span><span>Dashboard UI</span></div></div><div class="project-links"><a href="https://smart-resource-manager-seven.vercel.app/" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/SakshiDeep5/Smart-Resource-Manager-Allocation-Utilization-Suite" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-image"><img src="assets/canva.avif" alt="Canvas Play interactive drawing app preview"><span class="project-index">03</span></div>
+          <div class="project-content"><div><p class="project-kicker">Interactive app</p><h3>Canvas Play</h3><p>A playful drawing experience built around direct manipulation, a clean canvas, and responsive controls.</p><div class="tags"><span>JavaScript</span><span>Canvas API</span><span>CSS</span></div></div><div class="project-links"><a href="https://canvas-play-nu.vercel.app/" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/SakshiDeep5/CanvasPlay" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-image"><img src="assets/chessboard6.png" alt="N-Queen Visualizer algorithm visualization preview"><span class="project-index">04</span></div>
+          <div class="project-content"><div><p class="project-kicker">Algorithm visualization</p><h3>N-Queen Visualizer</h3><p>An interactive way to see a backtracking algorithm solve the classic N-Queen problem step by step.</p><div class="tags"><span>JavaScript</span><span>Algorithms</span><span>Visualization</span></div></div><div class="project-links"><a href="https://n-queen-visualizer-nu-gules.vercel.app/" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/SakshiDeep5/N-Queen-Visualizer" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
+        </article>
+      </div>
+      <article class="freelance-card"><div><p class="project-kicker">Freelance work</p><h3>E-invitation websites</h3><p>Birthday and wedding invitation experiences made with responsive layouts, animation, and a celebratory visual language.</p></div><div class="project-links"><a href="https://magical-birthday-invitation.vercel.app/" target="_blank" rel="noreferrer">Birthday ↗</a><a href="https://wedding-invitation-website-orcin.vercel.app/" target="_blank" rel="noreferrer">Wedding ↗</a></div></article>
     </section>
 
-    <section id="contact" role="form" aria-label="contact section">
-        <h3>Contact Me</h3>
-        <form class="contact-form" aria-label="contact-form" method="post">
-                <label for="fullname">Full Name:</label>
-                <input
-                  type="text"
-                  name="fname"
-                  id="fullname"
-                  required
-                  placeholder="enter your name"
-                />
-                <label for="email">Email:</label>
-                <input 
-                type="email"
-                name="email"
-                id="email"
-                required
-                placeholder="enter email"
-                />
-                <label for="message or feedback">Message or Feedback:</label>
-                <textarea
-                name="feedback"
-                id="message"
-                placeholder="message"></textarea>
-                <button type="submit">Submit</button>
-                </form>
+    <section class="section timeline-section container" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><span class="section-number">04</span><h2 id="experience-title">Experience</h2></div>
+      <div class="timeline">
+        <article class="timeline-item"><div class="timeline-date">Jul 2026 — Present</div><div class="timeline-detail"><p class="project-kicker">Utsavy · Jaipur, India</p><h3>Creative Frontend Developer Intern</h3><ul><li>Building digital invitation websites for weddings, anniversaries, engagements, and birthdays with React, JavaScript, and Tailwind CSS.</li><li>Creating polished animations and page transitions with Framer Motion.</li><li>Developed reusable responsive components across 10+ devices and themes.</li></ul></div></article>
+        <article class="timeline-item"><div class="timeline-date">Jan 2026 — Apr 2026</div><div class="timeline-detail"><p class="project-kicker">OpeBo Industries Ltd</p><h3>React Developer Intern</h3><ul><li>Developed reusable, responsive React components with UI/UX best practices and cross-browser compatibility.</li><li>Translated Figma mockups into clean, accessible React, JavaScript, and HTML/CSS interfaces.</li><li>Resolved UI bugs through systematic DevTools debugging, reducing reported issues by 30%.</li><li>Participated in sprint planning and documented component specifications.</li></ul></div></article>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <span class="footer-logo">Sakshi</span>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#work">Projects</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/sakshi-deep" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/SakshiDeep5" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
+    <section class="section education-section container" id="education" aria-labelledby="education-title">
+      <div class="section-heading"><span class="section-number">05</span><h2 id="education-title">Education & certifications</h2></div>
+      <div class="education-grid">
+        <div class="education-list"><article class="education-item"><span>2024 — 2026</span><div><h3>Master of Computer Application (MCA)</h3><p>Amity University, India · 8.5 CGPA</p></div></article><article class="education-item"><span>2019 — 2023</span><div><h3>Bachelor of Computer Application (BCA)</h3><p>M.S. College, Motihari · 80%</p></div></article></div>
+        <div class="certifications"><p class="project-kicker">Certifications</p><ul><li>Full Stack Web Development Program <small>Apna College</small></li><li>Master DSA with Java <small>Coding Blocks</small></li><li>TCS Youth Employability Program (YEP) <small>Tata Consultancy Services</small></li></ul></div>
+      </div>
+    </section>
 
-            </div>
-            <p class="footer-copyright">© 2025 Sakshi. Crafted with <i class="fas fa-heart"></i> and code.
-            </p>
-        </div>
-    </footer>
+    <section class="contact-section container" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Have a role in mind?</p><h2 id="contact-title">Let’s build something<br><em>useful together.</em></h2>
+      <p class="contact-intro">I’m open to frontend, full-stack, and data analyst opportunities. The best way to reach me is by email.</p>
+      <a class="email-link" href="mailto:deepsakshi07@gmail.com">deepsakshi07@gmail.com <span>↗</span></a>
+      <div class="contact-links"><a href="https://www.linkedin.com/in/sakshi-deep" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/SakshiDeep5" target="_blank" rel="noreferrer">GitHub ↗</a><a href="/resume.pdf" download>Resume ↓</a></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><span class="brand"><span>SD</span> Sakshi Deep</span><p>© 2026 Sakshi Deep</p><a href="#top">Back to top ↑</a></div></footer>
 </body>
 </html>
